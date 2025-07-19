@@ -1,0 +1,153 @@
+/* frontend/src/styles/Hero.css */
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: #f5f7fa;
+    min-height: calc(100vh - 70px);
+    gap: 40px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.hero-content-col {
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+    text-align: left;
+}
+
+.hero-image-col {
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+    text-align: center;
+}
+
+.hero-sub-heading {
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.hero-headline {
+    font-size: 3em;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.hero-button-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-button-primary {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button-primary:hover {
+    background-color: #0056b3; /* Cor mais escura no hover */
+}
+
+.hero-button-secondary {
+    padding: 12px 25px;
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-button-secondary:hover {
+    background-color: #007bff; /* Fundo azul no hover */
+    color: white; /* Texto branco no hover */
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.hero-special-box-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-special-box {
+    background-color: #0056b3; /* Fundo azul mais escuro no hover (como você já tinha) */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* .hero-special-box:hover{
+    background-color: #0056b3;
+} */
+
+.hero-special-box-heading { /* Para Consultoria Especializada */
+    color:white;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.hero-special-box-text { /* Para 100+ Clientes Satisfeitos */
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+.hero-special-box-subtext { /* Para 'Clientes Satisfeitos' */
+    font-size: 0.9em;
+    color:white
+}
+
+/* Estilo para a caixa quando o mouse passar por cima */
+.hero-special-box:hover {
+        background-color: white; /* Fundo azul mais escuro no hover (como você já tinha) */
+}
+
+/* Regras para os TEXTOS DENTRO da caixa quando a caixa for hover */
+.hero-special-box:hover .hero-special-box-heading,
+.hero-special-box:hover .hero-special-box-text,
+.hero-special-box:hover .hero-special-box-subtext {
+    color: #007bff;
+/* Altera a cor do texto para branco no hover */
+    transition: color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor do texto */
+}
