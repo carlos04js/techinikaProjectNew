@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 // Importe suas páginas
-import Navbar from './components/layout/NavBar';   // Ajuste o caminho se necessário
+import NavBar from './components/layout/NavBar';   // Ajuste o caminho se necessário
 import Login from './pages/Login';
 import Register from './pages/Register';
 import CarList from './pages/CarList';
@@ -21,7 +21,7 @@ function App() {
   return (
     <Router>
       {/* Barra de Navegação */}
-      <Navbar />
+      <NavBar />
 
       {/* Comentado para evitar conflito com o Navbar */}
       {/* <nav style={{ padding: '10px', borderBottom: '1px solid #ccc', background: '#f8f8f8' }}>
@@ -34,9 +34,9 @@ function App() {
       </nav> */}
 
       {/* Área onde as páginas serão renderizadas */}
-      <div style={{ }}>
+      <div style={{ paddingTop: '70px' }}>
       <Routes>
-        <Route path="/frontend/src/pages/HomePage.jsx" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/cars" element={<CarList />} />
