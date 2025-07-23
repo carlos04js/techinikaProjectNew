@@ -15,7 +15,7 @@ const Navbar = () => {
 
       {/* Links de Navegação */}
       <ul className="navbar-links"> {/* Classe para a lista de links */}
-        <li><Link to="/frontend/src/pages/HomePage.jsx" className="navbar-link">Home</Link></li>
+        <li><Link to="/" className="navbar-link">Home</Link></li>
         <li><Link to="/veiculos" className="navbar-link">Veículos</Link></li>
         <li><Link to="/busca" className="navbar-link">Busca</Link></li>
         <li><Link to="/servicos" className="navbar-link">Serviços</Link></li>
