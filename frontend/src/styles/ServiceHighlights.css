@@ -1,0 +1,84 @@
+/* frontend/src/styles/ServiceHighlights.css */
+
+.service-highlights-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: white; /* Fundo branco para contrastar com o Hero */
+}
+
+.service-highlights-headline {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-highlights-subtext {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem para responsividade */
+    margin-bottom: 40px;
+}
+
+.service-card {
+    background-color: #f5f7fa; /* Fundo suave para os cards */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1; /* Permite que os cards se expandam */
+    min-width: 280px; /* Largura mínima para os cards */
+    max-width: 350px; /* Largura máxima para os cards */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para hover */
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Efeito de levantar no hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra mais forte no hover */
+}
+
+.service-card-icon {
+    font-size: 3em; /* Tamanho do ícone */
+    color: #007bff; /* Cor do ícone */
+    margin-bottom: 20px;
+}
+
+.service-card-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-card-description {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.service-highlights-button {
+    padding: 12px 25px;
+    background-color: #6a0dad; /* Roxo para o botão "Ver Todos os Serviços" */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.service-highlights-button:hover {
+    background-color: #4a008b; /* Roxo mais escuro no hover */
+}
