@@ -1,0 +1,13 @@
+/* frontend/src/styles/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Seu CSS global personalizado vem AQUI ABAIXO dessas diretivas */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Outros estilos globais personalizados, se houver, aqui */
