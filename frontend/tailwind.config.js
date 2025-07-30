@@ -1,12 +1,110 @@
 // frontend/tailwind.config.js
 /** @type {import('tailwindcss').Config} */
+import tailwindcssAnimate from 'tailwindcss-animate'; // Para o plugin de animações
+
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}", // IMPORTANTE: Garante que o Tailwind analise seus arquivos JS/JSX/TS/TSX dentro de src
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+	darkMode: ["class"],
+	content: [
+		// <-- CRÍTICO: Ajustado para escanear seus arquivos .js e .jsx na pasta 'src'
+		"./index.html",
+		"./src/**/*.{js,jsx,ts,tsx}", // Garante que o Tailwind analise seus arquivos JS/JSX/TS/TSX
+	],
+	prefix: "",
+	theme: {
+		container: {
+			center: true,
+			padding: '2rem',
+			screens: {
+				'2xl': '1400px'
+			}
+		},
+		extend: {
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				montserrat: ['Montserrat', 'sans-serif'],
+				inter: ['Inter', 'sans-serif'], // Adicionado explicitamente
+			},
+			colors: {
+				// Cores genéricas (se não usar Shadcn UI, estas podem ser removidas ou definidas com hex)
+				border: 'hsl(var(--border))',
+				input: 'hsl(var(--input))',
+				ring: 'hsl(var(--ring))',
+				background: 'hsl(var(--background))',
+				foreground: 'hsl(var(--foreground))',
+				primary: {
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))'
+				},
+				secondary: {
+					DEFAULT: 'hsl(var(--secondary))',
+					foreground: 'hsl(var(--secondary-foreground))'
+				},
+				destructive: {
+					DEFAULT: 'hsl(var(--destructive))',
+					foreground: 'hsl(var(--destructive-foreground))'
+				},
+				muted: {
+					DEFAULT: 'hsl(var(--muted))',
+					foreground: 'hsl(var(--muted-foreground))'
+				},
+				accent: {
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))'
+				},
+				popover: {
+					DEFAULT: 'hsl(var(--popover))',
+					foreground: 'hsl(var(--popover-foreground))'
+				},
+				card: {
+					DEFAULT: 'hsl(var(--card))',
+					foreground: 'hsl(var(--card-foreground))'
+				},
+				// Cores Technika (hexadecimais) - MANTIDAS
+				technika: {
+					blue: '#1E3A8A',
+					lightBlue: '#3B82F6',
+					gray: '#64748B',
+					lightGray: '#F8FAFC',
+					dark: '#0F172A',
+				},
+				// SideBar (se não usar, pode ser removido)
+				sidebar: {
+					DEFAULT: 'hsl(var(--sidebar-background))',
+					foreground: 'hsl(var(--sidebar-foreground))',
+					primary: 'hsl(var(--sidebar-primary))',
+					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+					accent: 'hsl(var(--sidebar-accent))',
+					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+					border: 'hsl(var(--sidebar-border))',
+					ring: 'hsl(var(--sidebar-ring))'
+				}
+			},
+			borderRadius: {
+				lg: 'var(--radius)',
+				md: 'calc(var(--radius) - 2px)',
+				sm: 'calc(var(--radius) - 4px)'
+			},
+			keyframes: {
+				'accordion-down': { from: { height: '0' }, to: { height: 'var(--radix-accordion-content-height)' } },
+				'accordion-up': { from: { height: 'var(--radix-accordion-content-height)' }, to: { height: '0' } },
+				'fade-in': { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+				'slide-in': { '0%': { transform: 'translateY(20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+				'pulse-light': { '0%, 100%': { opacity: '1' }, '50%': { opacity: '0.5' } },
+				'wave': { '0%': { transform: 'scaleY(1)' }, '50%': { transform: 'scaleY(0.5)' }, '100%': { transform: 'scaleY(1)' } }
+			},
+			animation: {
+				'accordion-down': 'accordion-down 0.2s ease-out',
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'slide-in': 'slide-in 0.5s ease-out forwards',
+				'pulse-light': 'pulse-light 2s ease-in-out infinite',
+				'wave-1': 'wave 1.2s ease-in-out infinite',
+				'wave-2': 'wave 1.2s ease-in-out infinite 0.2s',
+				'wave-3': 'wave 1.2s ease-in-out infinite 0.4s',
+				'wave-4': 'wave 1.2s ease-in-out infinite 0.6s',
+				'wave-5': 'wave 1.2s ease-in-out infinite 0.8s',
+			}
+		}
+	},
+	plugins: [tailwindcssAnimate], // Usa a variável importada
 }
